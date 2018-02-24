@@ -1,0 +1,33 @@
+{"level":"notice","message":"*** Starting ActionHero ***","timestamp":"actionhero-worker-3 @ 2018-02-23T14:00:00.449Z"}
+{"level":"notice","message":"environment: development","timestamp":"actionhero-worker-3 @ 2018-02-23T14:00:00.450Z"}
+{"level":"notice","message":"pid: 17380","timestamp":"actionhero-worker-3 @ 2018-02-23T14:00:00.462Z"}
+{"level":"notice","message":"server ID: actionhero-worker-3","timestamp":"actionhero-worker-3 @ 2018-02-23T14:00:00.462Z"}
+{"level":"info","message":"actionhero member actionhero-worker-3 has joined the cluster","timestamp":"actionhero-worker-3 @ 2018-02-23T14:00:00.466Z"}
+{"level":"info","message":"resque scheduler started","timestamp":"actionhero-worker-3 @ 2018-02-23T14:00:00.471Z"}
+{"level":"notice","message":"Starting server: `socket` @ localhost:5000","timestamp":"actionhero-worker-3 @ 2018-02-23T14:00:00.473Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8080","timestamp":"actionhero-worker-3 @ 2018-02-23T14:00:00.480Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"actionhero-worker-3 @ 2018-02-23T14:00:00.481Z"}
+{"level":"info","message":"I started jwtauth","timestamp":"actionhero-worker-3 @ 2018-02-23T14:00:01.189Z"}
+{"level":"alert","message":"*** ActionHero Started ***","timestamp":"actionhero-worker-3 @ 2018-02-23T14:00:01.189Z"}
+{"workerId":1,"level":"info","message":"[ worker ] started","timestamp":"actionhero-worker-3 @ 2018-02-23T14:00:02.269Z"}
+{"level":"info","message":"actionhero member actionhero-worker-4 has joined the cluster","timestamp":"actionhero-worker-3 @ 2018-02-23T14:00:02.297Z"}
+{"workerId":2,"level":"info","message":"[ worker ] started","timestamp":"actionhero-worker-3 @ 2018-02-23T14:00:03.368Z"}
+{"level":"info","message":"actionhero member actionhero-worker-5 has joined the cluster","timestamp":"actionhero-worker-3 @ 2018-02-23T14:00:04.121Z"}
+{"level":"info","message":"actionhero member actionhero-worker-6 has joined the cluster","timestamp":"actionhero-worker-3 @ 2018-02-23T14:00:05.979Z"}
+{"level":"info","message":"actionhero member actionhero-worker-7 has joined the cluster","timestamp":"actionhero-worker-3 @ 2018-02-23T14:00:07.765Z"}
+{"level":"info","message":"actionhero member actionhero-worker-8 has joined the cluster","timestamp":"actionhero-worker-3 @ 2018-02-23T14:00:09.408Z"}
+{"level":"info","message":"Hello","timestamp":"actionhero-worker-3 @ 2018-02-23T14:00:57.313Z"}
+{"workerId":1,"job":{"class":"botTask","queue":"high"},"result":true,"level":"info","message":"[ worker ] job success high","timestamp":"actionhero-worker-3 @ 2018-02-23T14:00:57.314Z"}
+{"level":"info","message":"actionhero member actionhero-worker-8 has left the cluster","timestamp":"actionhero-worker-3 @ 2018-02-23T14:01:42.744Z"}
+{"level":"info","message":"actionhero member actionhero-worker-7 has left the cluster","timestamp":"actionhero-worker-3 @ 2018-02-23T14:01:43.267Z"}
+{"level":"info","message":"actionhero member actionhero-worker-6 has left the cluster","timestamp":"actionhero-worker-3 @ 2018-02-23T14:01:43.791Z"}
+{"level":"info","message":"actionhero member actionhero-worker-5 has left the cluster","timestamp":"actionhero-worker-3 @ 2018-02-23T14:01:44.314Z"}
+{"level":"info","message":"actionhero member actionhero-worker-4 has left the cluster","timestamp":"actionhero-worker-3 @ 2018-02-23T14:01:44.838Z"}
+{"level":"notice","message":"stopping process...","timestamp":"actionhero-worker-3 @ 2018-02-23T14:01:44.854Z"}
+{"level":"info","message":"resque scheduler ended","timestamp":"actionhero-worker-3 @ 2018-02-23T14:01:44.856Z"}
+{"workerId":1,"level":"info","message":"[ worker ] ended","timestamp":"actionhero-worker-3 @ 2018-02-23T14:01:45.211Z"}
+{"workerId":2,"level":"info","message":"[ worker ] ended","timestamp":"actionhero-worker-3 @ 2018-02-23T14:01:45.211Z"}
+{"level":"notice","message":"Stopping server: socket","timestamp":"actionhero-worker-3 @ 2018-02-23T14:01:45.357Z"}
+{"level":"notice","message":"Stopping server: web","timestamp":"actionhero-worker-3 @ 2018-02-23T14:01:45.358Z"}
+{"level":"notice","message":"Stopping server: websocket","timestamp":"actionhero-worker-3 @ 2018-02-23T14:01:45.358Z"}
+{"level":"info","message":"I stopped jwtauth","timestamp":"actionhero-worker-3 @ 2018-02-23T14:01:45.358Z"}
