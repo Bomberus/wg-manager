@@ -1,0 +1,17 @@
+image: debian:buster
+
+services:
+  - rethinkdb:latest
+  - node:latest
+
+cache:
+  paths:
+    - node_modules/
+
+before_script:
+  - npm install --only=dev
+  - node scripts/migrateDB.js
+
+test:
+  script:
+    - npm test
