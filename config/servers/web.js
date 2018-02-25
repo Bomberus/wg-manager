@@ -15,10 +15,10 @@ exports['default'] = {
         // i.e.: [ 'https://www.site.com' ]
         allowedRequestHosts: process.env.ALLOWED_HOSTS ? process.env.ALLOWED_HOSTS.split(',') : [],
         // Port or Socket Path
-        port: process.env.PORT || 8080,
+        port: process.env.PORT || 8088,
         // Which IP to listen on (use '0.0.0.0' for all; '::' for all on ipv4 and ipv6)
         // Set to `null` when listening to socket
-        bindIP: '0.0.0.0',
+        bindIP: '127.0.0.1',
         // Any additional headers you want actionhero to respond with
         httpHeaders: {
           'X-Powered-By': api.config.general.serverName,
