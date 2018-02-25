@@ -8,7 +8,7 @@ cache:
     - "node_modules"
 
 addons:
-  rethinkdb: "2.3"
+  rethinkdb: '2.3.4'
 
 services:
   - redis-server
