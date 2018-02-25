@@ -1,8 +1,7 @@
-image: debian:buster
+image: node:latest
 
 services:
   - rethinkdb:latest
-  - node:latest
 
 cache:
   paths:
