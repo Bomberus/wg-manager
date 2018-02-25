@@ -1,13 +1,14 @@
 image: node:latest
 
-services:
-  - rethinkdb:latest
-
 cache:
   paths:
     - node_modules/
 
+services:
+  - rethinkdb:latest
+
 before_script:
+  - npm install
   - npm install --only=dev
   - node scripts/migrateDB.js
 
