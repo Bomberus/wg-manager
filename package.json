@@ -30,7 +30,7 @@
     "start": "actionhero start cluster --workers=1",
     "actionhero": "actionhero",
     "nopretest": "standard",
-    "test": "cross-env NODE_ENV=test mocha"
+    "test": "cross-env NODE_ENV=test mocha -t 50000"
   },
   "standard": {
     "ignore": [
