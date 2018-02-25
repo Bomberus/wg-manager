@@ -1,10 +1,16 @@
-# My actionhero Project
+# WG Manager
+[![Build Status](https://travis-ci.org/Bomberus/wg-manager.svg?branch=master)](https://travis-ci.org/Bomberus/wg-manager)
 
-*visit www.actionherojs.com for more information*
+**Tasks**
+- [x] JWT Token Authorization
+- [x] Architecture
+- [ ] JWT Token Refreshing
+- [ ] Inventur
+- [ ] Shopping List
+- [ ] Bot: Deutsche Bahn
+- [ ] Bot: Eurest Essen 
 
 ## To install:
-(assuming you have [node](http://nodejs.org/) and NPM installed)
-
 `npm install`
 
 ## To Run:
