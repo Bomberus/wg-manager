@@ -1,8 +1,6 @@
 const r = require('rethinkdbdash')({
     port: 28015,
-    host: 'localhost',
-    user: 'admin',
-    password: ''
+    host: 'localhost'
 })
 
 function setup () {
