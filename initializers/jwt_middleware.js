@@ -64,7 +64,7 @@ module.exports = class AuthenticationMidleware extends Initializer {
                 else if (token) {
                     api.jwtauth.processToken(token, function (tokenData) {
                         data.connection._jwtTokenData = tokenData;
-                    }, (message) => {throw Error(message)});
+                    }, ({message}) => {throw Error(message)});
                 } else {
                     return;
                 }

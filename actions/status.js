@@ -76,7 +76,7 @@ module.exports = class Status extends ActionHero.Action {
     await this.checkEventLoop(data)
     await this.checkResqueQueues(data)
 
-    //await api.tasks.enqueueIn(30000,'botTask', 'default')
-    await api.tasks.enqueue('botTask', 'default')
+    // await api.tasks.enqueueIn(30000,'botTask', 'default')
+    // await api.tasks.enqueue('botTask', 'default')
   }
 }
