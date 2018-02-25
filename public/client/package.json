@@ -20,10 +20,10 @@
   "devDependencies": {
     "babel-eslint": "8.2.1",
     "devtron": "1.4.0",
-    "electron": "1.7.9",
-    "electron-debug": "1.4.0",
-    "electron-devtools-installer": "2.2.1",
-    "electron-packager": "9.1.0",
+    "electron": "^1.8.2",
+    "electron-debug": "^1.5.0",
+    "electron-devtools-installer": "^2.2.3",
+    "electron-packager": "^9.1.0",
     "eslint": "4.15.0",
     "eslint-config-standard": "10.2.1",
     "eslint-friendly-formatter": "3.0.0",
@@ -33,7 +33,7 @@
     "eslint-plugin-promise": "3.4.0",
     "eslint-plugin-standard": "3.0.1",
     "eslint-plugin-vue": "4.0.0",
-    "quasar-cli": "^0.15.1"
+    "quasar-cli": "^0.15.2"
   },
   "engines": {
     "node": ">= 8.9.0",

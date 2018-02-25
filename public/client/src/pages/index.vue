@@ -1,7 +1,8 @@
 <template>
   <q-page class="flex flex-center">
+    <q-btn color="white" text-color="dark" label="New item" />
     <div v-for="meal in meals" :key="meal.title">
-      <q-card>
+      <q-card color="white">
         <q-card-title>
           {{ meal.title }}
         </q-card-title>
