@@ -24,8 +24,7 @@
     "chai": "latest",
     "cross-env": "latest",
     "dirty-chai": "latest",
-    "mocha": "latest",
-    "standard": "^11.0.0"
+    "mocha": "latest"
   },
   "scripts": {
     "start": "actionhero start cluster --workers=1",

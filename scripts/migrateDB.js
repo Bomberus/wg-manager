@@ -20,6 +20,7 @@ function setup () {
             await r.getPoolMaster().drain()
             resolve(true)
         } catch(e) {
+            console.log(e.message)
             resolve(false)
         }
     })
