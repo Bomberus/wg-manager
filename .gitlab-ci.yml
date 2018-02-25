@@ -6,6 +6,7 @@ cache:
 
 services:
   - rethinkdb:latest
+  - redis:latest
 
 before_script:
   - npm install
