@@ -16,12 +16,9 @@ before_script:
 
 test:
   script:
-    - npm install -g codecov
-    - npm run build
-    - npm test && codecov
+    - npm test
 
 test:node:9:
   image: node:9
   script:
-    - npm run build
     - npm test
