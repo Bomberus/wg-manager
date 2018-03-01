@@ -1,7 +1,7 @@
 exports.default = {
   bugsnag: function(api){
     return {
-      apiKey: 'f31d3c003d8b6da6678c60a8525408e8',
+      apiKey: process.env.BUGSNAG_TOKEN,
       options: {
         useSSL: true,
         releaseStage: api.env,

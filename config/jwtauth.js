@@ -8,9 +8,9 @@ exports.default = {
           testServer: false
         },
         options: {
-          expiresIn: "1d",
+          expiresIn: '1d',
         },
-        secret: api.config.serverToken + 'M$48DzZ_%9sxB3L#X+7!a+?hn_@F_RVY8gGrkXg@!',
+        secret: api.config.serverToken + process.env.JWT_SECRET,
         algorithm: 'HS512',
         enableGet: false // enables token as GET parameters in addition to Authorization headers
       }
@@ -26,14 +26,14 @@ exports.default = {
           socket: true,
           testServer: true
         },
-        secret: api.config.serverToken + 'M$48DzZ_%9sxB3L#X+7!a+?hn_@F_RVY8gGrkXg@!',
+        secret: api.config.serverToken + 'test',
         algorithm: 'HS512',
         enableGet: false // enables token as GET parameters in addition to Authorization headers
       }
     }
   }
   
-  exports.production = { 
+/*  exports.production = { 
     jwtauth: function(api){
       return {
         enabled: {
@@ -42,9 +42,9 @@ exports.default = {
           socket: false,
           testServer: false
         },
-        secret: api.config.serverToken + 'M$48DzZ_%9sxB3L#X+7!a+?hn_@F_RVY8gGrkXg@!',
+        secret: api.config.serverToken + process.env.JWT_SECRET,
         algorithm: 'HS512',
         enableGet: false // enables token as GET parameters in addition to Authorization headers
       }
     }
-  }
+  }*/

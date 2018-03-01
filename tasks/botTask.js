@@ -15,9 +15,7 @@ module.exports = class BotTask extends Task {
   const Telegraf = require('telegraf')
   const { reply } = Telegraf
   
-  const exampleMessage = JSON.parse('{"update_id":851793512,"message":{"message_id":3050,"from":{"id":106928612,"is_bot":false,"first_name":"Pascal Maximilian","last_name":"Bremer","username":"Bomberus","language_code":"en-US"},"chat":{"id":106928612,"first_name":"Pascal Maximilian","last_name":"Bremer","username":"Bomberus","type":"private"},"date":1519398106,"text":"Hi"}}')
-
-  const bot = new Telegraf("81531553:AAF564zO3nGk0PLw_QK2P7o-2IHojtYwwnw")
+  const bot = new Telegraf(api.config.telegram.token)
   bot.on('message', (ctx) => ctx.reply('Pong'))
   try {
     await bot.handleUpdate(exampleMessage)
