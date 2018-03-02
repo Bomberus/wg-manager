@@ -41,7 +41,7 @@ module.exports = class AuthenticationMidleware extends Initializer {
 
                         // return error if token was required and missing
                         if (tokenRequired) {
-                            throw Error('Invalid Authorization Header')
+                            throw new Error('Invalid Authorization Header')
                         } else {
                             return;
                         }
@@ -57,14 +57,14 @@ module.exports = class AuthenticationMidleware extends Initializer {
 
                 // return error if token was missing but marked as required
                 if (tokenRequired && !token) {
-                    throw Error('Authorization Header Not Set')
+                    throw new Error('Authorization Header Not Set')
                 }
 
                 // process token and save in connection
                 else if (token) {
                     api.jwtauth.processToken(token, function (tokenData) {
                         data.connection._jwtTokenData = tokenData;
-                    }, ({message}) => {throw Error(message)});
+                    }, ({message}) => {throw new Error(message)});
                 } else {
                     return;
                 }

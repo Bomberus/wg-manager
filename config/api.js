@@ -1,5 +1,5 @@
 'use strict'
-
+require('dotenv').config()
 const path = require('path')
 
 exports['default'] = {
@@ -13,8 +13,8 @@ exports['default'] = {
       //  Be sure that every server you run has a unique ID (which will happen when generated dynamically)
       //  id: 'myActionHeroServer',
       // A unique token to your application that servers will use to authenticate to each other
-      serverToken: process.env.SERVER_TOKEN || 'test',
-      saltRounds: process.env.SALT_ROUNDS || 5,
+      serverToken: process.env.SERVER_TOKEN,
+      saltRounds: parseFloat(process.env.SALT_ROUNDS),
       // the redis prefix for actionhero's cache objects
       cachePrefix: 'actionhero:cache:',
       // the redis prefix for actionhero's cache/lock objects

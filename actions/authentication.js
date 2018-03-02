@@ -5,20 +5,13 @@ class ValidatedAction extends Action {
   constructor () {
     super()
     this.inputs = {
-      email: {
+      email: { 
         required: true,
-        validator: (param) => { api.validate_single(param, {email: true}) }
+        rules: 'email'
       },
-      password: {
+      password: { 
         required: true,
-        validator: (param) => {
-            api.validate_single({
-                length: {
-                    minimum: 6,
-                    message: "must be at least 6 characters"
-                }
-            })
-        }
+        rules: 'min:6'
       }
     }
   }
@@ -30,14 +23,12 @@ exports.UserAdd = class UserAdd extends ValidatedAction {
     super()
     this.name = 'userAdd'
     this.description = 'I add a user'
-    this.inputs = Object.assign(this.inputs, { password_repeat: {
+    this.inputs = Object.assign({
+      password_repeat: { 
         required: true,
-        validator: (param, connection, actionTemplate) => { 
-            if (param !== connection.params.password) {
-                throw Error("Passwords not identical")
-            }
-        } 
-    } })
+        rules: 'same:password' 
+      }
+    }, this.inputs)
   }
 
   async run (data) {

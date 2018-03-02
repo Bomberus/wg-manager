@@ -42,7 +42,7 @@ describe('actionhero Tests', () => {
       email: "test@test.de"
     }
     let data = await api.specHelper.runAction('userAdd', connection ) 
-    expect(data.error).to.equal('Error: password is a required parameter for this action')
+    expect(data.error).to.be.not.empty
   })
 
   it('Validate wrong repeat password', async () => {
@@ -52,7 +52,7 @@ describe('actionhero Tests', () => {
       password_repeat: "1234567"
     }
     let data = await api.specHelper.runAction('userAdd', connection ) 
-    expect(data.error).to.eq("Error: Passwords not identical")
+    expect(data.error).to.be.not.empty
   })
 
   it('Create a new User', async () => {
@@ -61,11 +61,11 @@ describe('actionhero Tests', () => {
         password: "12345678",
         password_repeat: "12345678"
     }
-    let data = await api.specHelper.runAction('userAdd', connection ) 
+    let data = await api.specHelper.runAction('userAdd', connection )
     const users = await api.r.table("users").run()
     expect(users.length).to.eq(1)
     expect(jwt_header).to.be.an('object').that.has.all.keys('Authorization');
-  })
+  })  
 
   it('User already created', async () => {
     connection.params = {
@@ -119,5 +119,4 @@ describe('actionhero Tests', () => {
     expect(users.length).to.eq(0)
     
   })
-
 })

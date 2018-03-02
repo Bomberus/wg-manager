@@ -1,30 +1,55 @@
 const {Initializer, api} = require('actionhero')
-const validate = require("validate.js");
+let Validator = require('validatorjs');
 
-module.exports = class ValidateInit extends Initializer {
+module.exports = class ValidatorMiddleware extends Initializer {
   constructor () {
     super()
-    this.name = 'validate'
-    this.loadPriority = 1000
-    this.startPriority = 1000
-    this.stopPriority = 1000
+    this.name = 'validate_middleware'
   }
 
   async initialize () { 
-    api.validate = validate
-    api.validate_single = (data, constraints) => {
-        const result_val = validate.single(data, constraints);
-        if (result_val) {
-            throw new Error(result_val[0])
+    const middleware = {
+        name: this.name,
+        global: true,
+        preProcessor: async (data) => {
+          let rules = {}
+          
+          const addRule = (obj, path) => {
+            if (!api._.isObject(obj)) {return}
+            
+            api._.forIn(obj, (value, sKey) => {
+              
+              if (api._.isObject(value)) {
+
+                let nestedObj = value
+                let sPath = ""
+                if (path === "") {
+                  sPath = sKey
+                } else {
+                  sPath = path + "." + sKey
+                }
+                
+                if (nestedObj.rules) {
+                  rules = api._.assign({[sKey]: nestedObj.rules}, rules)
+                } 
+                
+                addRule(nestedObj, sPath);
+              }
+            });
+          }
+          addRule(data.actionTemplate.inputs, "");          
+
+          if (rules) {
+            let validation = new Validator(data.params, rules);
+
+            if (validation.fails()){
+              throw new Error(JSON.stringify(validation.errors.all()))
+            }
+
+          }
         }
     }
-  }
 
-  async start () {
-    api.log('I started', 'info', this.name)
-  }
-
-  async stop () {
-    api.log('I stopped', 'info', this.name)
+    api.actions.addMiddleware(middleware)
   }
 }
