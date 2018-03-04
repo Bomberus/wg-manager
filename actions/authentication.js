@@ -21,7 +21,7 @@ class ValidatedAction extends Action {
 exports.UserAdd = class UserAdd extends ValidatedAction {
   constructor () {
     super()
-    this.name = 'userAdd'
+    this.name = 'user:add'
     this.description = 'I add a user'
     this.inputs = Object.assign({
       password_repeat: { 
@@ -46,7 +46,7 @@ exports.UserAdd = class UserAdd extends ValidatedAction {
 exports.UserGet = class UserAdd extends ValidatedAction {
     constructor () {
       super()
-      this.name = 'userGet'
+      this.name = 'user:get'
       this.description = 'I retrieve a user'
     }
   
@@ -64,7 +64,7 @@ exports.UserGet = class UserAdd extends ValidatedAction {
 exports.UserDelete = class UserDelete extends ValidatedAction {
   constructor () {
     super()
-    this.name = 'userDelete'
+    this.name = 'user:delete'
     this.description = 'I delete a user'
     this.authenticate = true
   }
