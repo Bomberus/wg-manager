@@ -41,7 +41,7 @@ describe('actionhero Tests', () => {
     connection.params = {
       email: "test@test.de"
     }
-    let data = await api.specHelper.runAction('userAdd', connection ) 
+    let data = await api.specHelper.runAction('user:add', connection ) 
     expect(data.error).to.be.not.empty
   })
 
@@ -51,7 +51,7 @@ describe('actionhero Tests', () => {
       password: "12345678",
       password_repeat: "1234567"
     }
-    let data = await api.specHelper.runAction('userAdd', connection ) 
+    let data = await api.specHelper.runAction('user:add', connection ) 
     expect(data.error).to.be.not.empty
   })
 
@@ -61,7 +61,7 @@ describe('actionhero Tests', () => {
         password: "12345678",
         password_repeat: "12345678"
     }
-    let data = await api.specHelper.runAction('userAdd', connection )
+    let data = await api.specHelper.runAction('user:add', connection )
     const users = await api.r.table("users").run()
     expect(users.length).to.eq(1)
     expect(jwt_header).to.be.an('object').that.has.all.keys('Authorization');
@@ -73,7 +73,7 @@ describe('actionhero Tests', () => {
         password: "12345678",
         password_repeat: "12345678"
     }
-    let data = await api.specHelper.runAction('userAdd', connection )
+    let data = await api.specHelper.runAction('user:add', connection )
     const users = await api.r.table("users").run()
     expect(users.length).to.eq(1)
     expect(data.error).to.equal("Error: User already registered")
@@ -84,7 +84,7 @@ describe('actionhero Tests', () => {
       email: "test@test.de",
       password: "1234567"
     }
-    let data = await api.specHelper.runAction('userGet', connection ) 
+    let data = await api.specHelper.runAction('user:get', connection ) 
     expect(data.error).to.eq('Error: Wrong Password')
   })
 
@@ -93,7 +93,7 @@ describe('actionhero Tests', () => {
       email: "test@test.de",
       password: "12345678"
     }
-    let data = await api.specHelper.runAction('userGet', connection ) 
+    let data = await api.specHelper.runAction('user:get', connection ) 
     expect(jwt_header).to.be.an('object').that.has.all.keys('Authorization');
   })
 
@@ -103,7 +103,7 @@ describe('actionhero Tests', () => {
         Authorization: "jwt"
       }
     }
-    let data = await api.specHelper.runAction('userDelete', connection ) 
+    let data = await api.specHelper.runAction('user:delete', connection ) 
     expect(data.error).to.eq("Error: Invalid Authorization Header")
   })
 
@@ -113,8 +113,8 @@ describe('actionhero Tests', () => {
       password: "12345678",  
       httpHeaders: jwt_header 
     }
-    let data = await api.specHelper.runAction('userGet', connection ) 
-        data = await api.specHelper.runAction('userDelete', connection ) 
+    let data = await api.specHelper.runAction('user:get', connection ) 
+        data = await api.specHelper.runAction('user:delete', connection ) 
     const users = await api.r.table("users").run()
     expect(users.length).to.eq(0)
     
