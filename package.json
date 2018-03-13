@@ -15,6 +15,7 @@
     "ioredis": "latest",
     "jsonwebtoken": "^8.1.1",
     "lodash": "^4.17.5",
+    "mustache": "^2.3.0",
     "quagga": "^0.12.1",
     "rethinkdbdash": "^2.3.31",
     "telegraf": "^3.18.0",
@@ -34,6 +35,7 @@
     "actionhero": "actionhero",
     "nopretest": "standard",
     "test": "cross-env NODE_ENV=test mocha -t 50000",
+    "test:bot": "cross-env NODE_ENV=test mocha -t 50000 test/bot.js --inspect",
     "test-inspect": "cross-env NODE_ENV=test mocha -t 50000 --inspect-brk"
   },
   "standard": {

@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-layout-header>
-      <q-toolbar color="primary">
+      <q-toolbar>
         <q-btn
           flat
           dense
@@ -20,7 +20,7 @@
 
     <q-layout-drawer
       v-model="leftDrawerOpen"
-      content-class="dark-bg"
+      contentClass="dark-bg"
     >
       <q-list
         no-border

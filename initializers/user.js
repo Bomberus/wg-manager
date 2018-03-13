@@ -14,7 +14,7 @@ module.exports = class UserInit extends Initializer {
     api.user = {}
     api.user.findByEmail = (email) => {
         return new Promise(async ( resolve ) => {
-            const findUser = await api.r.table("users").filter(api.r.row("email").eq(email)).run()
+            const findUser = await api.r.table('users').filter(api.r.row('email').eq(email)).run()
             if (findUser.length === 1){
                 resolve(findUser[0])
             }
@@ -27,11 +27,11 @@ module.exports = class UserInit extends Initializer {
         return new Promise(async ( resolve, reject ) => { 
             const user = await api.user.findByEmail(email)
             if (user) {
-                const bAuthenticated = await bcrypt.compare(password, user.password);
+                const bAuthenticated = await bcrypt.compare(password, user.password)
                 if (bAuthenticated)
                 {
                     api.jwtauth.generateToken({id: user.id }, api.config.jwtauth.options, (token) => {
-                        resolve("Token " + token);
+                        resolve('Token ' + token)
                     })
                 } else {
                     reject('Wrong Password')
@@ -47,7 +47,7 @@ module.exports = class UserInit extends Initializer {
         if (!user) {
             // hash the password along with our new salt
             const hash = await bcrypt.hash(password, api.config.general.saltRounds)
-            await api.r.table("users").insert({email,
+            await api.r.table('users').insert({email,
                                                 password: hash}).run()
             
                     
@@ -56,14 +56,14 @@ module.exports = class UserInit extends Initializer {
             } catch (e) {throw e}
         }
         else {
-            throw Error("User already registered") 
+            throw new Error('User already registered') 
         }
     },
     api.user.getCurrentUser = (connection) => {
         return new Promise( async (resolve) => { 
             if (connection._jwtTokenData) {
-                const id = connection._jwtTokenData.id;
-                const user = await api.r.table("users").get(id).run()
+                const id = connection._jwtTokenData.id
+                const user = await api.r.table('users').get(id).run()
                 resolve(user)
             }
             else {
@@ -74,7 +74,7 @@ module.exports = class UserInit extends Initializer {
     api.user.delete = async (connection) => {
         const user = await api.user.getCurrentUser(connection)
         if (user) {
-            await api.r.table("users").get(user.id).delete().run()
+            await api.r.table('users').get(user.id).delete().run()
         }
     }
   }

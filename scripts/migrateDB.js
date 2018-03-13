@@ -12,10 +12,13 @@ function setup () {
             await r.dbCreate("test").run()
             console.log("Creating test db")
             
-            const tableExists = await r.db("test").tableList().contains("test").run()
-            if (tableExists)
-                await r.db("test").tableDrop("users").run()
-            await r.db("test").tableCreate("users").run()
+            ["test","telegram","inventory"].forEach((sTable) => {
+                const tableExists = await r.db("test").tableList().contains(sTable).run()
+                if (tableExists)
+                    await r.db("test").tableDrop(sTable).run()
+                await r.db("test").tableCreate(sTable).run()
+            })
+            
             console.log("Creating test tables")
             await r.db("rethinkdb").table('users').contains("test").do(function(user){
                 return r.db("rethinkdb").table('users').get("test").delete()

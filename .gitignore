@@ -3,3 +3,4 @@ log/
 pids/
 .env
 playground/
+FavoriteRequests.json

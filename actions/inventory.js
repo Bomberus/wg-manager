@@ -10,7 +10,7 @@ class InventoryAction extends Action {
 exports.InventoryAdd = class InventoryItemAdd extends InventoryAction {
   constructor () {
     super()
-    this.name = 'inventoryAdd'
+    this.name = 'inventory:add'
     this.description = 'I add an item to the inventory'
   }
 
@@ -21,7 +21,7 @@ exports.InventoryAdd = class InventoryItemAdd extends InventoryAction {
 exports.InventoryGet = class InventoryItemGet extends InventoryAction {
   constructor () {
     super()
-    this.name = 'inventoryGet'
+    this.name = 'inventory:get'
     this.description = 'I get inventory items'
   }
 
@@ -33,7 +33,7 @@ exports.InventoryGet = class InventoryItemGet extends InventoryAction {
 exports.InventoryDelete = class InventoryItemDelete extends InventoryAction {
   constructor () {
     super()
-    this.name = 'inventoryDelete'
+    this.name = 'inventory:delete'
     this.description = 'I delete inventory item'
   }
 
@@ -44,7 +44,7 @@ exports.InventoryDelete = class InventoryItemDelete extends InventoryAction {
 exports.InventoryUpdate = class InventoryItemUpdate extends InventoryAction {
   constructor () {
     super()
-    this.name = 'inventoryUpdate'
+    this.name = 'inventory:update'
     this.description = 'I update inventory item'
   }
 

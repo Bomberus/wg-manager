@@ -11,7 +11,7 @@ let api
 let connection
 let jwt_header 
 
-describe('actionhero Tests', () => {
+describe('User Authentication Tests', () => {
   beforeEach(async () => {
       jwt_header = {}
   })
