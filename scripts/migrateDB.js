@@ -12,7 +12,7 @@ function setup () {
             await r.dbCreate("test").run()
             console.log("Creating test db")
             
-            ["test","telegram","inventory"].forEach((sTable) => {
+            ["test","telegram","inventory"].forEach(async(sTable) => {
                 const tableExists = await r.db("test").tableList().contains(sTable).run()
                 if (tableExists)
                     await r.db("test").tableDrop(sTable).run()
