@@ -6,27 +6,30 @@ const r = require('rethinkdbdash')({
 function setup () {
     return new Promise(async ( resolve, reject ) => {
         try {
-            const dbExists = await r.dbList().contains("test").run()
+            const dbExists = await r.dbList().contains('test').run()
             if (dbExists)
-                await r.dbDrop("test").run()
-            await r.dbCreate("test").run()
-            console.log("Creating test db")
+                await r.dbDrop('test').run()
+            await r.dbCreate('test').run()
+            console.log('Creating test db')
             
-            ["test","telegram","inventory"].forEach(async(sTable) => {
-                const tableExists = await r.db("test").tableList().contains(sTable).run()
+            const ListDB = ['test','telegram','inventory']
+
+            for (let index =0; index < ListDB.length; index++){
+                let sTable = ListDB[index]
+                const tableExists = await r.db('test').tableList().contains(sTable).run()
                 if (tableExists)
-                    await r.db("test").tableDrop(sTable).run()
-                await r.db("test").tableCreate(sTable).run()
-            })
+                    await r.db('test').tableDrop(sTable).run()
+                await r.db('test').tableCreate(sTable).run()
+            }
             
-            console.log("Creating test tables")
-            await r.db("rethinkdb").table('users').contains("test").do(function(user){
-                return r.db("rethinkdb").table('users').get("test").delete()
+            console.log('Creating test tables')
+            await r.db('rethinkdb').table('users').contains('test').do(function(user){
+                return r.db('rethinkdb').table('users').get('test').delete()
                  }).run()
-            await r.db("rethinkdb").table('users').insert({id: 'test', password: 'test'}).run()
-            console.log("Insert Test User")
-            await r.db("test").grant('test', {write: true, read: true}).run()
-            console.log("Grant Test User access to DB")
+            await r.db('rethinkdb').table('users').insert({id: 'test', password: 'test'}).run()
+            console.log('Insert Test User')
+            await r.db('test').grant('test', {write: true, read: true}).run()
+            console.log('Grant Test User access to DB')
 
             await r.getPoolMaster().drain()
             resolve(true)
