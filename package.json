@@ -12,29 +12,26 @@
     "bcrypt": "^1.0.3",
     "bugsnag": "^2.2.0",
     "dotenv": "^5.0.1",
-    "ioredis": "latest",
     "jsonwebtoken": "^8.1.1",
     "lodash": "^4.17.5",
     "mustache": "^2.3.0",
     "quagga": "^0.12.1",
     "rethinkdbdash": "^2.3.31",
     "telegraf": "^3.18.0",
-    "underscore": "^1.8.3",
-    "validate.js": "^0.12.0",
     "validatorjs": "^3.14.2",
     "ws": "latest"
   },
   "devDependencies": {
-    "chai": "latest",
     "cross-env": "latest",
-    "dirty-chai": "latest",
-    "mocha": "latest"
+    "jest": "^22.4.2"
+  },
+  "jest": {
   },
   "scripts": {
     "start": "actionhero start cluster --workers=1",
     "actionhero": "actionhero",
     "nopretest": "standard",
-    "test": "cross-env NODE_ENV=test mocha -t 50000",
+    "test": "jest",
     "test:bot": "cross-env NODE_ENV=test mocha -t 50000 test/bot.js --inspect",
     "test-inspect": "cross-env NODE_ENV=test mocha -t 50000 --inspect-brk"
   },
