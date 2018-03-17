@@ -18,7 +18,6 @@ module.exports = class BotTask extends Task {
   const bot = new Telegraf(api.config.telegram.token)
   const Bot = require('../lib/bot')
   const botClient = new Bot(api, data)
-  let global_ctx = undefined
 
   bot.command('cancel', async (ctx) => {
     let context = await botClient.context.getContext()
@@ -69,11 +68,10 @@ module.exports = class BotTask extends Task {
         type: 'task',
         remotePort: '0',
         remoteIP: '0',
-        rawConnection: {},
-        action: context.action
+        rawConnection: {}
       })
-  
-      connection.params = context.params
+      connection.params = Object.assign({}, context.params) || {}
+      connection.params.action = context.action
       const actionProcessor = new ActionProcessor(connection)
       let {response} = await actionProcessor.processAction()
 
@@ -81,10 +79,34 @@ module.exports = class BotTask extends Task {
         // Handle Error
       } else {
         // Handle Response + Formatting
-      }
+        const mustache = require('mustache')
+        const fs = require('fs')
+        const template = await fs.readFileSync(`templates/${context.action}.mustache`).toString()
+        const responseMarkdown = mustache.render(template, response)
+        ctx.reply(responseMarkdown, Extra.markdown().markup((m) =>
+          m.inlineKeyboard([
+            actionTemplate.outputExample.callbacks.map((aCallBack) => {
+              if (aCallBack.length > 2){
+                context = aCallBack[2](context)
+              }
+              return m.callbackButton(aCallBack[0], aCallBack[1]+JSON.stringify(context.params))
+            }),
+            Object.keys(actionTemplate.inputs).map((sKey) => {
+              return m.callbackButton(sKey, sKey)
+            })
+          ])))
 
+        
+        /*ctx.reply(responseMarkdown, Extra.markdown()
+          .markup((m) => {
+            m.inlineKeyboard([
+              m.callbackButton('Italic', 'italic')
+            ])
+        }))*/
+        
+      }
+      // Free ActionProcessor
       connection.destroy()
-      global_ctx = ctx
     }
   })
 

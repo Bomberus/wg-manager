@@ -12,7 +12,7 @@ function setup () {
             await r.dbCreate('test').run()
             console.log('Creating test db')
             
-            const ListDB = ['test','telegram','inventory']
+            const ListDB = ['users','telegram','inventory']
 
             for (let index =0; index < ListDB.length; index++){
                 let sTable = ListDB[index]

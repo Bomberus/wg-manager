@@ -8,10 +8,16 @@ exports.BahnGetConnection = class BahnAPIGetConnection extends Action {
     this.description = 'I search for a connection',
     this.outputExample = {
       template : 'SearchBahnAPI',
-      enableBot : true
+      enableBot : true,
+      callbacks : [
+        ["Back", "bahn:search"],
+        ["Subscribe", "bahn:subscribe"],
+        ["Next", "bahn:search"]
+      ]
     }
     this.inputs = {
       pagination: {
+        hidden: true,
         rule: 'integer'
       },
       start: {
@@ -21,9 +27,6 @@ exports.BahnGetConnection = class BahnAPIGetConnection extends Action {
       dest: {
         required: false,
         description: 'Destination point'
-      },
-      timeOfArrival: {
-        rule: 'date'
       },
       timeOfDeparture: {
         rule: 'date'

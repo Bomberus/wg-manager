@@ -1,9 +1,11 @@
 let connection
 let jwt_header
+//const api = global.api
 let api
 let actionhero
 
 beforeAll(async () => {
+    process.env.NODE_ENV = "test"
     const ActionHero = require('actionhero')
     actionhero = new ActionHero.Process()
     api = await actionhero.start()
@@ -18,12 +20,12 @@ beforeAll(async () => {
     }
 })
 
-beforeEach(() => {
-    jwt_header = {}
-})
-
 afterAll(async () => {
     await actionhero.stop()
+})
+
+beforeEach(() => {
+    jwt_header = {}
 })
 
 it('should have booted into the test env', () => {
