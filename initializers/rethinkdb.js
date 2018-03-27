@@ -26,6 +26,6 @@ module.exports = class RethinkDBInit extends Initializer {
 
   async stop () {
     api.log('I stopped', 'info', this.name)
-    api.r.getPoolMaster().drain();
+    api.r.getPoolMaster().drain()
   }
 }

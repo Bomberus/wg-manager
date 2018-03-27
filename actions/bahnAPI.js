@@ -8,24 +8,15 @@ exports.BahnGetConnection = class BahnAPIGetConnection extends Action {
     this.description = 'I search for a connection',
     this.outputExample = {
       template : 'SearchBahnAPI',
-      enableBot : true,
-      callbacks : [
-        ["Back", "bahn:search"],
-        ["Subscribe", "bahn:subscribe"],
-        ["Next", "bahn:search"]
-      ]
+      enableBot : true
     }
     this.inputs = {
-      pagination: {
-        hidden: true,
-        rule: 'integer'
-      },
       start: {
-        required: false,
+        required: true,
         description: 'Starting point'
       },
       dest: {
-        required: false,
+        required: true,
         description: 'Destination point'
       },
       timeOfDeparture: {
@@ -39,8 +30,8 @@ exports.BahnGetConnection = class BahnAPIGetConnection extends Action {
       {
         'from' : 'Karlsruhe',
         'to' : 'Walldorf',
-        'departure' : new Date(2018, 3, 13),
-        'arrival' : new Date(2018, 3, 13),
+        'departure' : api.moment().format('DD.MM HH:mm'),
+        'arrival' : api.moment().format('DD.MM HH:mm'),
         'traveltime' : 100 
       }
   }

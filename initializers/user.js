@@ -1,5 +1,5 @@
 const {Initializer, api} = require('actionhero')
-const bcrypt = require("bcrypt");
+const bcrypt = require('bcrypt')
 
 module.exports = class UserInit extends Initializer {
   constructor () {
@@ -12,6 +12,10 @@ module.exports = class UserInit extends Initializer {
 
   async initialize () { 
     api.user = {}
+    api.user.isBot = (connection) => {
+        return connection.type === 'bot'
+    },
+    
     api.user.findByEmail = (email) => {
         return new Promise(async ( resolve ) => {
             const findUser = await api.r.table('users').filter(api.r.row('email').eq(email)).run()

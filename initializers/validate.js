@@ -1,5 +1,5 @@
 const {Initializer, api} = require('actionhero')
-let Validator = require('validatorjs');
+let Validator = require('validatorjs')
 
 module.exports = class ValidatorMiddleware extends Initializer {
   constructor () {
@@ -22,25 +22,25 @@ module.exports = class ValidatorMiddleware extends Initializer {
               if (api._.isObject(value)) {
 
                 let nestedObj = value
-                let sPath = ""
-                if (path === "") {
+                let sPath = ''
+                if (path === '') {
                   sPath = sKey
                 } else {
-                  sPath = path + "." + sKey
+                  sPath = path + '.' + sKey
                 }
                 
                 if (nestedObj.rules) {
                   rules = api._.assign({[sKey]: nestedObj.rules}, rules)
                 } 
                 
-                addRule(nestedObj, sPath);
+                addRule(nestedObj, sPath)
               }
-            });
+            })
           }
-          addRule(data.actionTemplate.inputs, "");          
+          addRule(data.actionTemplate.inputs, '')     
 
           if (rules) {
-            let validation = new Validator(data.params, rules);
+            let validation = new Validator(data.params, rules)
 
             if (validation.fails()){
               throw new Error(JSON.stringify(validation.errors.all()))
