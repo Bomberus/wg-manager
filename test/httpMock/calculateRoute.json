@@ -1,0 +1,474 @@
+{
+    "response": {
+        "metaInfo": {
+            "timestamp": "2018-04-03T13:27:45Z",
+            "mapVersion": "8.30.81.153",
+            "moduleVersion": "7.2.201812-16577",
+            "interfaceVersion": "2.6.34",
+            "availableMapVersion": [
+                "8.30.81.153"
+            ]
+        },
+        "route": [
+            {
+                "waypoint": [
+                    {
+                        "linkId": "+716479695",
+                        "mappedPosition": {
+                            "latitude": 49.2950749,
+                            "longitude": 8.6415733
+                        },
+                        "originalPosition": {
+                            "latitude": 49.295266,
+                            "longitude": 8.6408689
+                        },
+                        "type": "stopOver",
+                        "spot": 0.3013699,
+                        "sideOfStreet": "left",
+                        "mappedRoadName": "",
+                        "label": "",
+                        "shapeIndex": 0
+                    },
+                    {
+                        "linkId": "-1199532177",
+                        "mappedPosition": {
+                            "latitude": 48.1349444,
+                            "longitude": 11.5523922
+                        },
+                        "originalPosition": {
+                            "latitude": 48.1347299,
+                            "longitude": 11.550761
+                        },
+                        "type": "stopOver",
+                        "spot": 0,
+                        "sideOfStreet": "neither",
+                        "mappedRoadName": "Bavariaring",
+                        "label": "Bavariaring",
+                        "shapeIndex": 2114
+                    }
+                ],
+                "mode": {
+                    "type": "fastest",
+                    "transportModes": [
+                        "car"
+                    ],
+                    "trafficMode": "enabled",
+                    "feature": []
+                },
+                "leg": [
+                    {
+                        "start": {
+                            "linkId": "+716479695",
+                            "mappedPosition": {
+                                "latitude": 49.2950749,
+                                "longitude": 8.6415733
+                            },
+                            "originalPosition": {
+                                "latitude": 49.295266,
+                                "longitude": 8.6408689
+                            },
+                            "type": "stopOver",
+                            "spot": 0.3013699,
+                            "sideOfStreet": "left",
+                            "mappedRoadName": "",
+                            "label": "",
+                            "shapeIndex": 0
+                        },
+                        "end": {
+                            "linkId": "-1199532177",
+                            "mappedPosition": {
+                                "latitude": 48.1349444,
+                                "longitude": 11.5523922
+                            },
+                            "originalPosition": {
+                                "latitude": 48.1347299,
+                                "longitude": 11.550761
+                            },
+                            "type": "stopOver",
+                            "spot": 0,
+                            "sideOfStreet": "neither",
+                            "mappedRoadName": "Bavariaring",
+                            "label": "Bavariaring",
+                            "shapeIndex": 2114
+                        },
+                        "length": 328067,
+                        "travelTime": 12900,
+                        "maneuver": [
+                            {
+                                "position": {
+                                    "latitude": 49.2950749,
+                                    "longitude": 8.6415733
+                                },
+                                "instruction": "Fahren Sie nach <span class=\"heading\">Norden</span>. <span class=\"distance-description\">Fahren Sie <span class=\"length\">51 m</span>.</span>",
+                                "travelTime": 10,
+                                "length": 51,
+                                "note": [],
+                                "roadName": "",
+                                "trafficTime": 10,
+                                "baseTime": 10,
+                                "id": "M1",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 49.2954826,
+                                    "longitude": 8.6418843
+                                },
+                                "instruction": "Biegen Sie <span class=\"direction\">rechts</span> ab in Richtung <span class=\"sign\">Dietmar-Hopp-Allee</span>. <span class=\"distance-description\">Fahren Sie <span class=\"length\">294 m</span>.</span>",
+                                "travelTime": 69,
+                                "length": 294,
+                                "note": [],
+                                "roadName": "",
+                                "trafficTime": 69,
+                                "baseTime": 69,
+                                "id": "M2",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 49.295032,
+                                    "longitude": 8.6449206
+                                },
+                                "instruction": "Biegen Sie <span class=\"direction\">links</span> ab auf die <span class=\"next-street\">Dietmar-Hopp-Allee</span>. <span class=\"distance-description\">Fahren Sie <span class=\"length\">151 m</span>.</span>",
+                                "travelTime": 25,
+                                "length": 151,
+                                "note": [],
+                                "roadName": "",
+                                "trafficTime": 25,
+                                "baseTime": 25,
+                                "id": "M3",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 49.2960083,
+                                    "longitude": 8.6463583
+                                },
+                                "instruction": "Fahren Sie weiter auf die <span class=\"next-street\">Dietmar-Hopp-Allee</span>. <span class=\"distance-description\">Fahren Sie <span class=\"length\">92 m</span>.</span>",
+                                "travelTime": 34,
+                                "length": 92,
+                                "note": [],
+                                "roadName": "Dietmar-Hopp-Allee",
+                                "trafficTime": 34,
+                                "baseTime": 34,
+                                "id": "M4",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 49.2967701,
+                                    "longitude": 8.6467767
+                                },
+                                "instruction": "Biegen Sie <span class=\"direction\">links</span> ab auf <span class=\"next-street\">Südumgehung</span> <span class=\"number\">(L723)</span>. <span class=\"distance-description\">Fahren Sie <span class=\"length\">2.0 km</span>.</span>",
+                                "travelTime": 169,
+                                "length": 2030,
+                                "note": [],
+                                "roadName": "Dietmar-Hopp-Allee",
+                                "trafficTime": 169,
+                                "baseTime": 154,
+                                "id": "M5",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 49.3020701,
+                                    "longitude": 8.621403
+                                },
+                                "instruction": "Biegen Sie <span class=\"direction\">rechts</span> ab und nehmen Sie die Auffahrt auf die <span class=\"number\">A5</span> in Richtung <span class=\"sign\"><span lang=\"de\">Karlsruhe</span>/<span lang=\"de\">Heilbronn</span></span>. <span class=\"distance-description\">Fahren Sie <span class=\"length\">40.0 km</span>.</span>",
+                                "travelTime": 1477,
+                                "length": 40017,
+                                "note": [],
+                                "roadName": "Südumgehung",
+                                "trafficTime": 1477,
+                                "baseTime": 1397,
+                                "id": "M6",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.9791,
+                                    "longitude": 8.4368885
+                                },
+                                "instruction": "Nehmen Sie die Abfahrt <span class=\"exit\">46</span> in Richtung <span class=\"sign\"><span lang=\"de\">München</span>/<span lang=\"de\">Stuttgart</span>/<span lang=\"de\">Pforzheim</span></span> auf die <span class=\"number\">A8</span>. <span class=\"distance-description\">Fahren Sie <span class=\"length\">60.7 km</span>.</span>",
+                                "travelTime": 2553,
+                                "length": 60656,
+                                "note": [
+                                    {
+                                        "type": "traffic",
+                                        "code": "congestion",
+                                        "text": "stockender Verkehr Durchschnittsgeschwindigkeit 5 km/h, vorsichtig an das Stauende heranfahren",
+                                        "additionalData": [
+                                            {
+                                                "key": "severity",
+                                                "value": "veryHigh"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "roadName": "",
+                                "trafficTime": 2553,
+                                "baseTime": 2112,
+                                "id": "M7",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.7277985,
+                                    "longitude": 9.0590858
+                                },
+                                "instruction": "Fahren Sie weiter auf die <span class=\"number\">A8</span> in Richtung <span class=\"sign\"><span lang=\"de\">München</span>/<span lang=\"de\">Ulm</span>/<span lang=\"de\">S-Möhringen</span>/<span lang=\"de\">S-Degerloch</span>/<span lang=\"de\">Flughafen</span>/<span lang=\"de\">Messe</span></span>. <span class=\"distance-description\">Fahren Sie <span class=\"length\">204 km</span>.</span>",
+                                "travelTime": 7343,
+                                "length": 204476,
+                                "note": [
+                                    {
+                                        "type": "traffic",
+                                        "code": "congestion",
+                                        "text": "stockender Verkehr Durchschnittsgeschwindigkeit 5 km/h, vorsichtig an das Stauende heranfahren",
+                                        "additionalData": [
+                                            {
+                                                "key": "severity",
+                                                "value": "veryHigh"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "traffic",
+                                        "code": "trafficFlow",
+                                        "text": "Wanderbaustelle, rechter Fahrstreifen gesperrt",
+                                        "additionalData": [
+                                            {
+                                                "key": "severity",
+                                                "value": "high"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "traffic",
+                                        "code": "roadworks",
+                                        "text": "Baustelle",
+                                        "additionalData": [
+                                            {
+                                                "key": "severity",
+                                                "value": "high"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "roadName": "",
+                                "trafficTime": 7343,
+                                "baseTime": 6865,
+                                "id": "M8",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.182795,
+                                    "longitude": 11.4300513
+                                },
+                                "instruction": "Nehmen Sie die Abfahrt <span class=\"exit\">81</span> in Richtung <span class=\"sign\"><span lang=\"de\">Lindau</span>/<span lang=\"de\">Garmisch-P.</span></span> auf die <span class=\"number\">A99</span>. <span class=\"distance-description\">Fahren Sie <span class=\"length\">7.1 km</span>.</span>",
+                                "travelTime": 312,
+                                "length": 7059,
+                                "note": [],
+                                "roadName": "",
+                                "trafficTime": 312,
+                                "baseTime": 307,
+                                "id": "M9",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.1292689,
+                                    "longitude": 11.4022422
+                                },
+                                "instruction": "Fahren Sie weiter auf <span class=\"next-street\">Autobahndreieck München-Süd-West</span> in Richtung <span class=\"sign\"><span lang=\"de\">Garmisch-P.</span>/<span lang=\"de\">München-Sendling</span>/<span lang=\"de\">München-Zentrum</span></span>. <span class=\"distance-description\">Fahren Sie <span class=\"length\">778 m</span>.</span>",
+                                "travelTime": 32,
+                                "length": 778,
+                                "note": [],
+                                "roadName": "",
+                                "trafficTime": 32,
+                                "baseTime": 32,
+                                "id": "M10",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.1292152,
+                                    "longitude": 11.4111471
+                                },
+                                "instruction": "Halten Sie sich <span class=\"direction\">rechts</span> und fahren Sie auf die <span class=\"number\">A96</span>. <span class=\"distance-description\">Fahren Sie <span class=\"length\">7.8 km</span>.</span>",
+                                "travelTime": 395,
+                                "length": 7841,
+                                "note": [],
+                                "roadName": "Autobahndreieck München-Süd-West",
+                                "trafficTime": 395,
+                                "baseTime": 389,
+                                "id": "M11",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.1244731,
+                                    "longitude": 11.5135217
+                                },
+                                "instruction": "Nehmen Sie die Abfahrt <span class=\"exit\">39</span> <span class=\"direction\">links</span> in Richtung <span class=\"sign\"><span lang=\"de\">Nürnberg</span>/<span lang=\"de\">Flughafen München</span>/<span lang=\"de\">Stadtmitte</span>/<span lang=\"de\">Arena</span></span> auf die <span class=\"number\">B2R</span> <span class=\"next-street\">(Garmischer Straße)</span>. <span class=\"distance-description\">Fahren Sie <span class=\"length\">2.7 km</span>.</span>",
+                                "travelTime": 188,
+                                "length": 2669,
+                                "note": [],
+                                "roadName": "Ammerseestraße",
+                                "trafficTime": 188,
+                                "baseTime": 185,
+                                "id": "M12",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.1379163,
+                                    "longitude": 11.5345824
+                                },
+                                "instruction": "Nehmen Sie die Auffahrt in Richtung <span class=\"sign\"><span lang=\"de\">Augsburg</span>/<span lang=\"de\">B2</span>/<span lang=\"de\">Pasing</span>/<span lang=\"de\">Stadtmitte</span></span>. <span class=\"distance-description\">Fahren Sie <span class=\"length\">226 m</span>.</span>",
+                                "travelTime": 31,
+                                "length": 226,
+                                "note": [],
+                                "roadName": "Garmischer Straße",
+                                "trafficTime": 31,
+                                "baseTime": 31,
+                                "id": "M13",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.1399441,
+                                    "longitude": 11.5346789
+                                },
+                                "instruction": "Biegen Sie <span class=\"direction\">rechts</span> ab auf die <span class=\"next-street\">Landsberger Straße</span>. <span class=\"distance-description\">Fahren Sie <span class=\"length\">1.1 km</span>.</span>",
+                                "travelTime": 137,
+                                "length": 1110,
+                                "note": [],
+                                "roadName": "Trappentreustraße",
+                                "trafficTime": 137,
+                                "baseTime": 108,
+                                "id": "M14",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.138839,
+                                    "longitude": 11.5495276
+                                },
+                                "instruction": "Fahren Sie weiter auf die <span class=\"next-street\">Martin-Greif-Straße</span>. <span class=\"distance-description\">Fahren Sie <span class=\"length\">148 m</span>.</span>",
+                                "travelTime": 34,
+                                "length": 148,
+                                "note": [],
+                                "roadName": "Bayerstraße",
+                                "trafficTime": 34,
+                                "baseTime": 22,
+                                "id": "M15",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.1375623,
+                                    "longitude": 11.5497208
+                                },
+                                "instruction": "Fahren Sie weiter auf <span class=\"next-street\">Bavariaring</span>. <span class=\"distance-description\">Fahren Sie <span class=\"length\">73 m</span>.</span>",
+                                "travelTime": 13,
+                                "length": 73,
+                                "note": [],
+                                "roadName": "Martin-Greif-Straße",
+                                "trafficTime": 13,
+                                "baseTime": 11,
+                                "id": "M16",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.1368971,
+                                    "longitude": 11.5496671
+                                },
+                                "instruction": "Fahren Sie weiter auf <span class=\"next-street\">Theresienhöhe</span>. <span class=\"distance-description\">Fahren Sie <span class=\"length\">84 m</span>.</span>",
+                                "travelTime": 17,
+                                "length": 84,
+                                "note": [],
+                                "roadName": "Bavariaring",
+                                "trafficTime": 17,
+                                "baseTime": 14,
+                                "id": "M17",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.1362855,
+                                    "longitude": 11.5490234
+                                },
+                                "instruction": "Biegen Sie <span class=\"direction\">links</span> ab auf <span class=\"next-street\">Theresienhöhe</span>. <span class=\"distance-description\">Fahren Sie <span class=\"length\">73 m</span>.</span>",
+                                "travelTime": 31,
+                                "length": 73,
+                                "note": [],
+                                "roadName": "Theresienhöhe",
+                                "trafficTime": 31,
+                                "baseTime": 31,
+                                "id": "M18",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.1360602,
+                                    "longitude": 11.5497315
+                                },
+                                "instruction": "Fahren Sie weiter auf <span class=\"next-street\">Bavariaring</span>. <span class=\"distance-description\">Fahren Sie <span class=\"length\">239 m</span>.</span>",
+                                "travelTime": 30,
+                                "length": 239,
+                                "note": [],
+                                "roadName": "Theresienhöhe",
+                                "trafficTime": 30,
+                                "baseTime": 30,
+                                "id": "M19",
+                                "_type": "PrivateTransportManeuverType"
+                            },
+                            {
+                                "position": {
+                                    "latitude": 48.1349444,
+                                    "longitude": 11.5523922
+                                },
+                                "instruction": "Sie erreichen <span class=\"street\">Bavariaring</span>.",
+                                "travelTime": 0,
+                                "length": 0,
+                                "note": [
+                                    {
+                                        "type": "info",
+                                        "code": "previousIntersection",
+                                        "text": "Letzte Kreuzung ist <span class=\"street\">Pettenkoferstraße</span>"
+                                    },
+                                    {
+                                        "type": "info",
+                                        "code": "nextIntersection",
+                                        "text": "Wenn Sie <span class=\"next-street\">Pettenkoferstraße</span> erreichen, sind Sie zu weit gefahren"
+                                    }
+                                ],
+                                "roadName": "Bavariaring",
+                                "trafficTime": 0,
+                                "baseTime": 0,
+                                "id": "M20",
+                                "_type": "PrivateTransportManeuverType"
+                            }
+                        ]
+                    }
+                ],
+                "summary": {
+                    "distance": 328067,
+                    "trafficTime": 12900,
+                    "baseTime": 11826,
+                    "flags": [
+                        "tunnel",
+                        "motorway",
+                        "builtUpArea"
+                    ],
+                    "text": "Ihre Fahrt ist <span class=\"length\">328 km</span> lang und dauert etwa <span class=\"time\">3 Stunden und 35 Minuten</span>.",
+                    "travelTime": 12900,
+                    "_type": "RouteSummaryType"
+                }
+            }
+        ],
+        "language": "de-de"
+    }
+}

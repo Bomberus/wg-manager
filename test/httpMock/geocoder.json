@@ -1,0 +1,60 @@
+{
+  "response": {
+    "metaInfo": {
+      "timestamp": "2018-04-03T08:05:26.206+0000"
+    },
+    "view": [{
+      "result": [{
+        "relevance": 0.86,
+        "matchLevel": "street",
+        "matchQuality": {
+          "city": 1.0,
+          "street": [0.62]
+        },
+        "location": {
+          "locationId": "NT_TMnGu5Ga45qDgJQgYSPbBC",
+          "locationType": "point",
+          "displayPosition": {
+            "latitude": 50.90896,
+            "longitude": 6.92349
+          },
+          "navigationPosition": [{
+            "latitude": 50.90896,
+            "longitude": 6.92349
+          }],
+          "mapView": {
+            "topLeft": {
+              "latitude": 50.90982,
+              "longitude": 6.92149
+            },
+            "bottomRight": {
+              "latitude": 50.90786,
+              "longitude": 6.92535
+            }
+          },
+          "address": {
+            "label": "Nassestraße, 50939 Köln, Deutschland",
+            "country": "DEU",
+            "state": "Nordrhein-Westfalen",
+            "county": "Köln",
+            "city": "Köln",
+            "district": "Klettenberg",
+            "street": "Nassestraße",
+            "postalCode": "50939",
+            "additionalData": [{
+              "value": "Deutschland",
+              "key": "CountryName"
+            }, {
+              "value": "Nordrhein-Westfalen",
+              "key": "StateName"
+            }, {
+              "value": "Köln",
+              "key": "CountyName"
+            }]
+          }
+        }
+      }],
+      "viewId": 0
+    }]
+  }
+}

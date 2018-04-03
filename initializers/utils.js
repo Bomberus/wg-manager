@@ -13,6 +13,13 @@ module.exports = class UtilsInit extends Initializer {
     api._ = require('lodash')
     api.moment = require('moment')
     api.later = require('later')
+    api.transform = {
+      toLower: (obj) => {
+        return api._.transform(obj, function (result, val, key) {
+          result[key.toLowerCase()] = val
+        })
+      }
+    }
   }
 
   async start () {

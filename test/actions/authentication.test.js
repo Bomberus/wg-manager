@@ -5,11 +5,11 @@ let api
 let actionhero
 
 beforeAll(async () => {
-    process.env.NODE_ENV = "test"
+    process.env.NODE_ENV = 'test'
     const ActionHero = require('actionhero')
     actionhero = new ActionHero.Process()
     api = await actionhero.start()
-    await api.r.table("users").delete().run()
+    await api.r.table('users').delete().run()
     connection = new api.specHelper.Connection()
     connection.rawConnection = {
         res: {
@@ -36,7 +36,7 @@ it('should have booted into the test env', () => {
 
 it('Validate field missing', async () => {
     connection.params = {
-        email: "test@test.de"
+        email: 'test@test.de'
     }
     let data = await api.specHelper.runAction('user:add', connection)
     expect(data.error).not.toBeUndefined()
@@ -44,9 +44,9 @@ it('Validate field missing', async () => {
 
 it('Validate wrong repeat password', async () => {
     connection.params = {
-        email: "test@test.de",
-        password: "12345678",
-        password_repeat: "1234567"
+        email: 'test@test.de',
+        password: '12345678',
+        password_repeat: '1234567'
     }
     let data = await api.specHelper.runAction('user:add', connection)
     expect(data.error).not.toBeUndefined()
@@ -54,32 +54,32 @@ it('Validate wrong repeat password', async () => {
 
 it('Create a new User', async () => {
     connection.params = {
-        email: "test@test.de",
-        password: "12345678",
-        password_repeat: "12345678"
+        email: 'test@test.de',
+        password: '12345678',
+        password_repeat: '12345678'
     }
     let data = await api.specHelper.runAction('user:add', connection)
-    const users = await api.r.table("users").run()
+    const users = await api.r.table('users').run()
     expect(users.length).toEqual(1)
     expect(jwt_header).toHaveProperty('Authorization')
 })
 
 it('User already created', async () => {
     connection.params = {
-        email: "test@test.de",
-        password: "12345678",
-        password_repeat: "12345678"
+        email: 'test@test.de',
+        password: '12345678',
+        password_repeat: '12345678'
     }
     let data = await api.specHelper.runAction('user:add', connection)
-    const users = await api.r.table("users").run()
+    const users = await api.r.table('users').run()
     expect(users.length).toEqual(1)
-    expect(data.error).toEqual("Error: User already registered")
+    expect(data.error).toEqual('Error: User already registered')
 })
 
 it('Authenticate wrong password', async () => {
     connection.params = {
-        email: "test@test.de",
-        password: "1234567"
+        email: 'test@test.de',
+        password: '1234567'
     }
     let data = await api.specHelper.runAction('user:get', connection)
     expect(data.error).toEqual('Error: Wrong Password')
@@ -87,32 +87,32 @@ it('Authenticate wrong password', async () => {
 
 it('Authenticate', async () => {
     connection.params = {
-        email: "test@test.de",
-        password: "12345678"
+        email: 'test@test.de',
+        password: '12345678'
     }
     let data = await api.specHelper.runAction('user:get', connection)
-    expect(jwt_header).toHaveProperty('Authorization');
+    expect(jwt_header).toHaveProperty('Authorization')
 })
 
 it('Delete wrong jwt', async () => {
     connection.params = {
         httpHeaders: {
-            Authorization: "jwt"
+            Authorization: 'jwt'
         }
     }
     let data = await api.specHelper.runAction('user:delete', connection)
-    expect(data.error).toEqual("Error: Invalid Authorization Header")
+    expect(data.error).toEqual('Error: Invalid Authorization Header')
 })
 
 it('Delete user', async () => {
     connection.params = {
-        email: "test@test.de",
-        password: "12345678",
+        email: 'test@test.de',
+        password: '12345678',
         httpHeaders: jwt_header
     }
     let data = await api.specHelper.runAction('user:get', connection)
     data = await api.specHelper.runAction('user:delete', connection)
-    const users = await api.r.table("users").run()
+    const users = await api.r.table('users').run()
     expect(users.length).toEqual(0)
 
 })

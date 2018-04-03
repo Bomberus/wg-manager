@@ -1,0 +1,300 @@
+{
+  "response": {
+    "metaInfo": {
+      "timestamp": "2018-04-03T08:13:55Z",
+      "mapVersion": "8.30.81.153",
+      "moduleVersion": "7.2.201812-16577",
+      "interfaceVersion": "2.6.34",
+      "availableMapVersion": ["8.30.81.153"]
+    },
+    "route": {
+      "routeId": "AIEACAAAAB4AAABRAAAAmQAAAJwAAAB42mOYw8DAxMQABKxJb1rqNhqnMECBtaKz2EpeexuG//8hAh/2MyABLiCuWfZ6FhNDltqnluhllnCNNgudxWYw21vj0fjmSeoaRqDFCEF99oM1QFqRgUVFm41BgIGRQU+BgYMRAJDaG21H47qG",
+      "waypoint": [{
+        "linkId": "+50883580",
+        "mappedPosition": {
+          "latitude": 50.90896,
+          "longitude": 6.9234902
+        },
+        "originalPosition": {
+          "latitude": 50.9089599,
+          "longitude": 6.92349
+        },
+        "type": "stopOver",
+        "spot": 0.0710383,
+        "sideOfStreet": "neither",
+        "mappedRoadName": "Nassestraße",
+        "label": "Nassestraße",
+        "shapeIndex": 0
+      }, {
+        "linkId": "+833382981",
+        "mappedPosition": {
+          "latitude": 50.9416727,
+          "longitude": 6.9551715
+        },
+        "originalPosition": {
+          "latitude": 50.94168,
+          "longitude": 6.95517
+        },
+        "type": "stopOver",
+        "spot": 0.4941176,
+        "sideOfStreet": "neither",
+        "mappedRoadName": "Komödienstraße",
+        "label": "Komödienstraße",
+        "shapeIndex": 94
+      }],
+      "mode": {
+        "type": "fastest",
+        "transportModes": ["car"],
+        "trafficMode": "enabled",
+        "feature": []
+      },
+      "shape": ["50.90896,6.9234902", "50.9098184,6.921494", "50.9112239,6.9229209", "50.9121466,6.9238865", "50.9130371,6.9248736", "50.9142494,6.9260752", "50.915451,6.9273841", "50.9156871,6.9276202", "50.9155262,6.9280064", "50.9142494,6.9315147", "50.9137666,6.9327593", "50.9134448,6.9337142", "50.913316,6.934036", "50.9132946,6.9341433", "50.9130585,6.9347548", "50.9130049,6.934948", "50.9128547,6.9352913", "50.9118032,6.9381773", "50.9115028,6.9390357", "50.9113204,6.9396472", "50.9109771,6.9410205", "50.9108591,6.9415677", "50.9106982,6.9433916", "50.9103549,6.9455266", "50.9103227,6.9457734", "50.9118783,6.9457948", "50.91205,6.9458055", "50.9122217,6.9458592", "50.9142816,6.9471037", "50.9147966,6.9473934", "50.9149468,6.9474578", "50.9153116,6.9476831", "50.9167707,6.9485199", "50.916996,6.9486701", "50.9174144,6.9489062", "50.9175646,6.9490242", "50.9188306,6.949743", "50.9189701,6.9497323", "50.9194636,6.9500649", "50.9210193,6.9509983", "50.9225214,6.9518888", "50.9227467,6.9520175", "50.9228861,6.9520712", "50.9231329,6.952275", "50.923723,6.952436", "50.9240019,6.9525754", "50.9245813,6.952951", "50.9247744,6.9531548", "50.9249997,6.9533372", "50.9257829,6.9538951", "50.9259653,6.9540668", "50.9262013,6.954335", "50.926609,6.9548392", "50.9269202,6.9551933", "50.9275317,6.9558048", "50.9276497,6.9558907", "50.9281647,6.9560838", "50.9284115,6.9560838", "50.9285188,6.9560623", "50.9286582,6.9560087", "50.9288621,6.9559228", "50.9291947,6.9557405", "50.9305894,6.9549251", "50.9307718,6.9548821", "50.9312868,6.9545925", "50.9317482,6.9542599", "50.9323061,6.9539487", "50.9326923,6.9537556", "50.9333467,6.9535089", "50.9338939,6.9533694", "50.9340549,6.9533157", "50.9343553,6.9532621", "50.9351707,6.9532084", "50.9354925,6.9531119", "50.9358251,6.9529188", "50.9361041,6.95279", "50.936501,6.9527686", "50.936619,6.95279", "50.9368765,6.9528115", "50.9373701,6.9528866", "50.9378421,6.9530475", "50.9386897,6.9534123", "50.9388506,6.9534552", "50.9390759,6.9534552", "50.9400201,6.9532943", "50.9402561,6.9533801", "50.9403634,6.9533908", "50.9407604,6.953305", "50.9410071,6.953187", "50.9411466,6.9531977", "50.9412324,6.9532299", "50.9412861,6.9532728", "50.9414685,6.9535947", "50.941565,6.9538414", "50.9416727,6.9551715"],
+      "boundingBox": {
+        "topLeft": {
+          "latitude": 50.9416727,
+          "longitude": 6.921494
+        },
+        "bottomRight": {
+          "latitude": 50.90896,
+          "longitude": 6.9560838
+        }
+      },
+      "leg": [{
+        "start": {
+          "linkId": "+50883580",
+          "mappedPosition": {
+            "latitude": 50.90896,
+            "longitude": 6.9234902
+          },
+          "originalPosition": {
+            "latitude": 50.9089599,
+            "longitude": 6.92349
+          },
+          "type": "stopOver",
+          "spot": 0.0710383,
+          "sideOfStreet": "neither",
+          "mappedRoadName": "Nassestraße",
+          "label": "Nassestraße",
+          "shapeIndex": 0
+        },
+        "end": {
+          "linkId": "+833382981",
+          "mappedPosition": {
+            "latitude": 50.9416727,
+            "longitude": 6.9551715
+          },
+          "originalPosition": {
+            "latitude": 50.94168,
+            "longitude": 6.95517
+          },
+          "type": "stopOver",
+          "spot": 0.4941176,
+          "sideOfStreet": "neither",
+          "mappedRoadName": "Komödienstraße",
+          "label": "Komödienstraße",
+          "shapeIndex": 94
+        },
+        "length": 6163,
+        "travelTime": 1127,
+        "maneuver": [{
+          "position": {
+            "latitude": 50.90896,
+            "longitude": 6.9234902
+          },
+          "instruction": "Head toward Luxemburger Straße on Nassestraße. Go for 170 m.",
+          "travelTime": 36,
+          "length": 170,
+          "note": [],
+          "toLink": "+50883580",
+          "roadName": "",
+          "nextRoadName": "Nassestraße",
+          "roadNumber": "",
+          "id": "M1"
+        }, {
+          "position": {
+            "latitude": 50.9098184,
+            "longitude": 6.921494
+          },
+          "instruction": "Turn right onto Luxemburger Straße (B265). Go for 783 m.",
+          "travelTime": 132,
+          "length": 783,
+          "note": [],
+          "toLink": "+1171785696",
+          "roadName": "Nassestraße",
+          "nextRoadName": "Luxemburger Straße",
+          "roadNumber": "",
+          "id": "M2"
+        }, {
+          "position": {
+            "latitude": 50.9156871,
+            "longitude": 6.9276202
+          },
+          "instruction": "Turn right onto Gottesweg toward Zollstock/Polizei. Go for 1.4 km.",
+          "travelTime": 191,
+          "length": 1404,
+          "note": [],
+          "toLink": "-1201480902",
+          "roadName": "Luxemburger Straße",
+          "nextRoadName": "Gottesweg",
+          "roadNumber": "B265",
+          "id": "M3"
+        }, {
+          "position": {
+            "latitude": 50.9103549,
+            "longitude": 6.9455266
+          },
+          "instruction": "Turn left onto Vorgebirgstraße. Go for 1.6 km.",
+          "travelTime": 508,
+          "length": 1596,
+          "note": [],
+          "toLink": "-50883978",
+          "roadName": "Gottesweg",
+          "nextRoadName": "Vorgebirgstraße",
+          "roadNumber": "",
+          "id": "M4"
+        }, {
+          "position": {
+            "latitude": 50.923723,
+            "longitude": 6.952436
+          },
+          "instruction": "Continue on Ulrichgasse. Go for 504 m.",
+          "travelTime": 58,
+          "length": 504,
+          "note": [],
+          "toLink": "+50885657",
+          "roadName": "Vorgebirgstraße",
+          "nextRoadName": "Ulrichgasse",
+          "roadNumber": "",
+          "id": "M5"
+        }, {
+          "position": {
+            "latitude": 50.9276497,
+            "longitude": 6.9558907
+          },
+          "instruction": "Keep left onto Tel-Aviv-Straße. Go for 478 m.",
+          "travelTime": 46,
+          "length": 478,
+          "note": [],
+          "toLink": "+51115662",
+          "roadName": "Ulrichgasse",
+          "nextRoadName": "Tel-Aviv-Straße",
+          "roadNumber": "",
+          "id": "M6"
+        }, {
+          "position": {
+            "latitude": 50.9317482,
+            "longitude": 6.9542599
+          },
+          "instruction": "Continue on Neuköllner Straße. Go for 248 m.",
+          "travelTime": 31,
+          "length": 248,
+          "note": [{
+            "type": "traffic",
+            "code": "congestion",
+            "text": "queuing traffic with average speeds 5 mph. Approach with care",
+            "additionalData": [{
+              "key": "severity",
+              "value": "veryHigh"
+            }]
+          }, {
+            "type": "traffic",
+            "code": "trafficFlow",
+            "text": "slow moving maintenance vehicles. Left lane closed",
+            "additionalData": [{
+              "key": "severity",
+              "value": "high"
+            }]
+          }],
+          "toLink": "+51115406",
+          "roadName": "Tel-Aviv-Straße",
+          "nextRoadName": "Neuköllner Straße",
+          "roadNumber": "",
+          "id": "M7"
+        }, {
+          "position": {
+            "latitude": 50.9338939,
+            "longitude": 6.9533694
+          },
+          "instruction": "Keep left onto Nord-Süd-Fahrt. Go for 308 m.",
+          "travelTime": 31,
+          "length": 308,
+          "note": [],
+          "toLink": "+51115276",
+          "roadName": "Neuköllner Straße",
+          "nextRoadName": "Nord-Süd-Fahrt",
+          "roadNumber": "",
+          "id": "M8"
+        }, {
+          "position": {
+            "latitude": 50.936619,
+            "longitude": 6.95279
+          },
+          "instruction": "Continue on Tunisstraße. Go for 383 m.",
+          "travelTime": 48,
+          "length": 383,
+          "note": [],
+          "toLink": "+77150601",
+          "roadName": "Nord-Süd-Fahrt",
+          "nextRoadName": "Tunisstraße",
+          "roadNumber": "",
+          "id": "M9"
+        }, {
+          "position": {
+            "latitude": 50.9400201,
+            "longitude": 6.9532943
+          },
+          "instruction": "Keep right onto Tunisstraße toward Friesenplatz/Dom/Philharmonie/Museen/Bezirksregierung. Go for 113 m.",
+          "travelTime": 14,
+          "length": 113,
+          "note": [],
+          "toLink": "+572299713",
+          "roadName": "Tunisstraße",
+          "nextRoadName": "Tunisstraße",
+          "roadNumber": "",
+          "id": "M10"
+        }, {
+          "position": {
+            "latitude": 50.9410071,
+            "longitude": 6.953187
+          },
+          "instruction": "Turn right onto Komödienstraße. Go for 176 m.",
+          "travelTime": 32,
+          "length": 176,
+          "note": [],
+          "toLink": "+891938506",
+          "roadName": "Tunisstraße",
+          "nextRoadName": "Komödienstraße",
+          "roadNumber": "",
+          "id": "M11"
+        }, {
+          "position": {
+            "latitude": 50.9416727,
+            "longitude": 6.9551715
+          },
+          "instruction": "Arrive at Komödienstraße.",
+          "travelTime": 0,
+          "length": 0,
+          "note": [{
+            "type": "info",
+            "code": "nextIntersection",
+            "text": "If you reach Marzellenstraße, you’ve gone too far"
+          }],
+          "roadName": "Komödienstraße",
+          "nextRoadName": "",
+          "roadNumber": "",
+          "id": "M12"
+        }]
+      }],
+      "note": [],
+      "summary": {
+        "distance": 6163,
+        "trafficTime": 1127,
+        "baseTime": 774,
+        "flags": ["tunnel", "builtUpArea"],
+        "text": "The trip takes 6.2 km and 19 mins.",
+        "travelTime": 1127
+      }
+    },
+    "language": "en-us"
+  }
+}

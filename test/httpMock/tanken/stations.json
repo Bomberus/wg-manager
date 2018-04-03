@@ -1,0 +1,72 @@
+{
+  "ok": true,
+  "license": "CC BY 4.0 -  https:\/\/creativecommons.tankerkoenig.de",
+  "data": "MTS-K",
+  "status": "ok",
+  "stations": [
+      {
+          "id": "474e5046-deaf-4f9b-9a32-9797b778f047",
+          "name": "TOTAL BERLIN",
+          "brand": "TOTAL",
+          "street": "MARGARETE-SOMMER-STR.",
+          "place": "BERLIN",
+          "lat": 52.53083,
+          "lng": 13.440946,
+          "dist": 1.1,
+          "diesel": 1.009,
+          "e5": 1.009,
+          "e10": 1.009,
+          "isOpen": true,
+          "houseNumber": "2",
+          "postCode": 10407
+      },
+      {
+          "id": "4429a7d9-fb2d-4c29-8cfe-2ca90323f9f8",
+          "name": "TOTAL BERLIN",
+          "brand": "TOTAL",
+          "street": "HOLZMARKTSTR.",
+          "place": "BERLIN",
+          "lat": 52.5114,
+          "lng": 13.428477,
+          "dist": 1.2,
+          "diesel": 1.009,
+          "e5": 1.009,
+          "e10": 1.009,
+          "isOpen": true,
+          "houseNumber": "36-42",
+          "postCode": 10243
+      },
+      {
+          "id": "278130b1-e062-4a0f-80cc-19e486b4c024",
+          "name": "Aral Tankstelle",
+          "brand": "ARAL",
+          "street": "Holzmarktstra\u00dfe",
+          "place": "Berlin",
+          "lat": 52.5141525,
+          "lng": 13.4214869,
+          "dist": 1.4,
+          "diesel": 1.009,
+          "e5": 1.009,
+          "e10": 1.009,
+          "isOpen": true,
+          "houseNumber": "12\/14",
+          "postCode": 10179
+      },
+      {
+          "id": "e1a15081-25a3-9107-e040-0b0a3dfe563c",
+          "name": "Berlin, Holzmarktstr. 4",
+          "brand": "HEM",
+          "street": "Holzmarktstr.",
+          "place": "Berlin",
+          "lat": 52.51477,
+          "lng": 13.419435,
+          "dist": 1.4,
+          "diesel": 1.009,
+          "e5": 1.009,
+          "e10": 1.009,
+          "isOpen": true,
+          "houseNumber": "4",
+          "postCode": 10179
+      }
+  ]
+}
