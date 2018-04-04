@@ -23,7 +23,7 @@ module.exports = class TankerKoenig extends Initializer {
         let data = await axios.get('https://creativecommons.tankerkoenig.de/json/prices.php?ids=' + stationIds.join(',') + credentials)
         return data.data.prices
       },
-      getStations: async (lat, long, area = 10, type='e10') => {
+      getStations: async (lat, long, area = 5, type='e10') => {
         let data =  await axios.get(`https://creativecommons.tankerkoenig.de/json/list.php?lat=${lat}&lng=${long}&rad=${area}&sort=price&type=${type}`+ credentials)
         return data.data.stations
       }

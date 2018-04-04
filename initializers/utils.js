@@ -15,9 +15,12 @@ module.exports = class UtilsInit extends Initializer {
     api.later = require('later')
     api.transform = {
       toLower: (obj) => {
-        return api._.transform(obj, function (result, val, key) {
-          result[key.toLowerCase()] = val
-        })
+        return Object.keys(obj).reduce(function (newObj, key) {
+          let val = obj[key]
+          let newVal = (typeof val === 'object') ? api.transform.toLower(val) : val
+          newObj[key.toLowerCase()] = newVal
+          return newObj
+        } , {})
       }
     }
   }

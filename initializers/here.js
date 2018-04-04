@@ -16,8 +16,8 @@ module.exports = class HereInit extends Initializer {
       geocode : async (searchtext) => {
         try {
           let matches = await axios.get('https://geocoder.cit.api.here.com/6.2/geocode.json' + credentials + `&searchtext=${searchtext}`)
-              matches = api.transform.toLower(matches)
-          return matches.data.response.view[0].result
+              matches = api.transform.toLower(matches.data)
+          return matches.response.view[0].result
         } catch(e) {
           api.log(e)
         }

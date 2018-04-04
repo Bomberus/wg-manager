@@ -1,8 +1,7 @@
 exports.default = { 
   telegram: function(api){
     return {
-      token: process.env.TELEGRAM_BOT_TOKEN,
-      userid: process.env.TELEGRAM_ID
+      token: process.env.TELEGRAM_BOT_TOKEN
     }
   }
 }
@@ -10,7 +9,7 @@ exports.default = {
 exports.test = { 
   telegram: function(api){
     return {
-      token: process.env.TELEGRAM_BOT_TOKEN
+      token: 404
     }
   }
 }

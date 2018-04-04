@@ -6,7 +6,7 @@ module.exports = class SchedulerTask extends Task {
    super()
    this.name = 'schedulerTask'
    this.description = 'I run the scheduler'
-   this.frequency = 2000
+   this.frequency = 0
    this.queue = 'default'
    this.middleware = []
  }

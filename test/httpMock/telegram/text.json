@@ -1,0 +1,23 @@
+{
+  "update_id": 569048534,
+  "message": {
+    "message_id": 3132,
+    "from": {
+      "id": 404,
+      "is_bot": false,
+      "first_name": "Some User",
+      "last_name": "Oddball",
+      "username": "ddd",
+      "language_code": "en-US"
+    },
+    "chat": {
+      "id": 404,
+      "first_name": "ddd",
+      "last_name": "dd",
+      "username": "ddd",
+      "type": "private"
+    },
+    "date": 1522846057,
+    "text": "Hello"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "update_id": 569048540,
+  "callback_query": {
+    "id": "459254894862504751",
+    "from": {
+      "id": 404,
+      "is_bot": false,
+      "first_name": "Douche Douche",
+      "last_name": "Douche",
+      "username": "Douche",
+      "language_code": "en-US"
+    },
+    "message": {
+      "message_id": 3114,
+      "from": {
+        "id": 404,
+        "is_bot": true,
+        "first_name": "BotName",
+        "username": "BotName"
+      },
+      "chat": {
+        "id": 404,
+        "first_name": "Douche",
+        "last_name": "Douche",
+        "username": "Douche",
+        "type": "private"
+      },
+      "date": 1521557804,
+      "text": "Bahnverbindung\n=================\nvon Karlsruhe um 20.03 15:56\nnach Walldorf um 20.03 15:56\n=================",
+      "entities": [{
+        "offset": 0,
+        "length": 14,
+        "type": "bold"
+      }, {
+        "offset": 15,
+        "length": 17,
+        "type": "italic"
+      }, {
+        "offset": 91,
+        "length": 17,
+        "type": "italic"
+      }]
+    },
+    "chat_instance": "2914390429104921",
+    "data": "{\"action\":\"bahn:search\",\"pagination\":0}"
+  }
+}

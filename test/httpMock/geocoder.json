@@ -1,60 +1,65 @@
 {
-  "response": {
-    "metaInfo": {
-      "timestamp": "2018-04-03T08:05:26.206+0000"
+  "Response": {
+    "MetaInfo": {
+      "Timestamp": "2018-04-04T14:49:18.317+0000"
     },
-    "view": [{
-      "result": [{
-        "relevance": 0.86,
-        "matchLevel": "street",
-        "matchQuality": {
-          "city": 1.0,
-          "street": [0.62]
+    "View": [{
+      "_type": "SearchResultsViewType",
+      "ViewId": 0,
+      "Result": [{
+        "Relevance": 1,
+        "MatchLevel": "houseNumber",
+        "MatchQuality": {
+          "City": 1,
+          "Street": [1],
+          "HouseNumber": 1,
+          "PostalCode": 1
         },
-        "location": {
-          "locationId": "NT_TMnGu5Ga45qDgJQgYSPbBC",
-          "locationType": "point",
-          "displayPosition": {
-            "latitude": 50.90896,
-            "longitude": 6.92349
+        "MatchType": "pointAddress",
+        "Location": {
+          "LocationId": "NT_fAS5r165i5hJaSsK2yjOxC_0MD",
+          "LocationType": "point",
+          "DisplayPosition": {
+            "Latitude": 48.98546,
+            "Longitude": 8.47554
           },
-          "navigationPosition": [{
-            "latitude": 50.90896,
-            "longitude": 6.92349
+          "NavigationPosition": [{
+            "Latitude": 48.98549,
+            "Longitude": 8.4756
           }],
-          "mapView": {
-            "topLeft": {
-              "latitude": 50.90982,
-              "longitude": 6.92149
+          "MapView": {
+            "TopLeft": {
+              "Latitude": 48.9865842,
+              "Longitude": 8.473827
             },
-            "bottomRight": {
-              "latitude": 50.90786,
-              "longitude": 6.92535
+            "BottomRight": {
+              "Latitude": 48.9843358,
+              "Longitude": 8.477253
             }
           },
-          "address": {
-            "label": "Nassestraße, 50939 Köln, Deutschland",
-            "country": "DEU",
-            "state": "Nordrhein-Westfalen",
-            "county": "Köln",
-            "city": "Köln",
-            "district": "Klettenberg",
-            "street": "Nassestraße",
-            "postalCode": "50939",
-            "additionalData": [{
+          "Address": {
+            "Label": "Max-Beckmann-Straße 43, 76227 Karlsruhe, Deutschland",
+            "Country": "DEU",
+            "State": "Baden-Württemberg",
+            "County": "Karlsruhe (Stadt)",
+            "City": "Karlsruhe",
+            "District": "Durlach",
+            "Street": "Max-Beckmann-Straße",
+            "HouseNumber": "43",
+            "PostalCode": "76227",
+            "AdditionalData": [{
               "value": "Deutschland",
               "key": "CountryName"
             }, {
-              "value": "Nordrhein-Westfalen",
+              "value": "Baden-Württemberg",
               "key": "StateName"
             }, {
-              "value": "Köln",
+              "value": "Karlsruhe (Stadt)",
               "key": "CountyName"
             }]
           }
         }
-      }],
-      "viewId": 0
+      }]
     }]
   }
 }

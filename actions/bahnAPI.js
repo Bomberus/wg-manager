@@ -7,7 +7,6 @@ exports.BahnGetConnection = class BahnAPIGetConnection extends Action {
     this.name = 'bahn:search'
     this.description = 'I search for a connection',
     this.outputExample = {
-      template : 'SearchBahnAPI',
       enableBot : true
     }
     this.inputs = {

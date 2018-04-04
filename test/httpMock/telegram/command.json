@@ -1,0 +1,27 @@
+{
+  "update_id": 569048531,
+  "message": {
+    "message_id": 3129,
+    "from": {
+      "id": 404,
+      "is_bot": false,
+      "first_name": "User",
+      "last_name": "ddd",
+      "username": "Lol",
+      "language_code": "de"
+    },
+    "chat": {
+      "id": -220338479,
+      "title": "DailyQuicky",
+      "type": "group",
+      "all_members_are_administrators": true
+    },
+    "date": 1522845824,
+    "text": "/command",
+    "entities": [{
+      "offset": 0,
+      "length": 8,
+      "type": "bot_command"
+    }]
+  }
+}
