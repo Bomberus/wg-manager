@@ -6,6 +6,7 @@ parserOptions:
   sourceType: module
   ecmaVersion: 8
 rules:
+  no-case-declarations: off
   quotes:
     - error
     - single

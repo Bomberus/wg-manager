@@ -59,11 +59,13 @@ it('Bot state differs for different users', async () => {
       command2.message.from.id = 400
   
   const botClient = new Bot(api, command)
+  botClient.ctx.db.user_id = 404
   let session = await botClient.loadSession()
 
   const botClient2 = new Bot(api, command2)
+  botClient2.ctx.db.user_id = 400
   let session2 = await botClient2.loadSession()
-
+  
   session.foo = 'bar'
   await botClient.saveSession()
 

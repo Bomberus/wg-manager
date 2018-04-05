@@ -7,8 +7,9 @@ class BotAction extends Action {
     this.name = 'start:bot'
     this.description = 'Start the bot'
     this.inputs = {
-      update_id : {required: true},
-      message: {required: true}
+      update_id : {},
+      message: {},
+      inline_query: {}
     }
   }
   async run(data) {

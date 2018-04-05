@@ -12,8 +12,7 @@ exports.TankGetStation = class TankAPIGetStation extends Action {
     this.inputs = {
       data: {
         required: true,
-        minWidth: 10,
-        description: 'Location Input'
+        rules: 'min:10'
       }
     }
   }
@@ -27,6 +26,7 @@ exports.TankGetStation = class TankAPIGetStation extends Action {
     data.response.type = 'location' 
     data.response.data = stations.filter(oStation => oStation.price != null).map(oStation => {
       return {
+        id : oStation.id,
         longitude: oStation.lng,
         latitude: oStation.lat,
         street: oStation.street + ' ' +oStation.houseNumber,
