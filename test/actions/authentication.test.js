@@ -1,8 +1,8 @@
 let connection
 let jwt_header
-//const api = global.api
+
 let api
-let actionhero
+let actionhero 
 
 beforeAll(async () => {
     process.env.NODE_ENV = 'test'

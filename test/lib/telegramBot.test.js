@@ -7,10 +7,19 @@ let callback
 let inline
 let command
 let text
+let location
 
 const fs = require('fs')
+const nock = require('nock')
 
 beforeAll(async () => {
+    nock.disableNetConnect()
+    nock('https://geocoder.cit.api.here.com')
+      .get(/.*/)
+      .replyWithFile(200, __dirname + '/../httpMock/geocoder.json', {'Content-Type': 'application/json', 'access-control-allow-origin': '*'})
+    nock('https://creativecommons.tankerkoenig.de/json/list.php')
+      .get(/.*/)
+      .replyWithFile(200, __dirname + '/../httpMock/tanken/stations.json', {'Content-Type': 'application/json', 'access-control-allow-origin': '*'})
     process.env.NODE_ENV = 'test'
     const ActionHero = require('actionhero')
     actionhero = new ActionHero.Process()
@@ -25,10 +34,13 @@ beforeAll(async () => {
     inline   = JSON.parse(fs.readFileSync(__dirname + '/../httpMock/telegram/inline.json'))
     command  = JSON.parse(fs.readFileSync(__dirname + '/../httpMock/telegram/command.json'))
     text     = JSON.parse(fs.readFileSync(__dirname + '/../httpMock/telegram/text.json'))
+    location = JSON.parse(fs.readFileSync(__dirname + '/../httpMock/telegram/location.json'))
 })
 
 afterAll(async () => {
     await actionhero.stop()
+    nock.cleanAll()
+    nock.enableNetConnect()
 })
 
 it('Bot parses Incoming requests', async () => {
@@ -81,4 +93,33 @@ it('Bot state differs for different users', async () => {
   
   expect(session.foo).toEqual('bar')
   expect(session2.foo).toEqual('bar2')
+})
+
+it('Check Callback', async () => {
+  expect(true).toBeTruthy()
+})
+
+it('Check Message', async () => {
+    const botClient = new Bot(api, text)
+    
+    // No command given => show help
+    const TelegramAction = await botClient.handleUpdate()
+    expect(TelegramAction.command).toEqual('sendMessage')
+    expect(TelegramAction.data[0]).toEqual(text.message.chat.id)
+    expect(TelegramAction.data[1]).toEqual(botClient.listRules())
+})
+
+it('Check Inline', async () => {
+  let botClient = new Bot(api, inline)
+
+  // Wrong command => empty action 
+  let TelegramAction = await botClient.handleUpdate()
+  expect(TelegramAction).toBeUndefined()
+
+  inline.inline_query.query = "ts Berlin Alexanderplatz",
+  botClient = new Bot(api, inline)
+  TelegramAction = await botClient.handleUpdate()
+  expect(TelegramAction.command).toEqual('answerInlineQuery')
+  expect(TelegramAction.data[0]).toEqual(inline.inline_query.id)
+  expect(TelegramAction.data[1]).toHaveLength(4)
 })

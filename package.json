@@ -32,7 +32,8 @@
     "cross-env": "latest",
     "jest": "^22.4.2"
   },
-  "jest": {},
+  "jest": {
+  },
   "scripts": {
     "start": "actionhero start cluster --workers=1",
     "actionhero": "actionhero",

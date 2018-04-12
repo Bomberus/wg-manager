@@ -1,0 +1,35 @@
+{
+  "update_id": 569048557,
+  "message": {
+    "message_id": 3134,
+    "from": {
+      "id": 404,
+      "is_bot": false,
+      "first_name": "SomeUser",
+      "last_name": "22",
+      "username": "22",
+      "language_code": "en-US"
+    },
+    "chat": {
+      "id": 404,
+      "first_name": "SomeUser",
+      "last_name": "22",
+      "username": "22",
+      "type": "private"
+    },
+    "date": 1523531532,
+    "location": {
+      "latitude": 51.525279,
+      "longitude": -0.034829
+    },
+    "venue": {
+      "location": {
+        "latitude": 51.525279,
+        "longitude": -0.034829
+      },
+      "title": "Greedy Cow",
+      "address": "2 Grove Rd",
+      "foursquare_id": "4ad09a7af964a520b1d820e3"
+    }
+  }
+}

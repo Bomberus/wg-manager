@@ -15,6 +15,7 @@
           "dist": 1.1,
           "diesel": 1.009,
           "e5": 1.009,
+          "price": 1.009,
           "e10": 1.009,
           "isOpen": true,
           "houseNumber": "2",
@@ -32,6 +33,7 @@
           "diesel": 1.009,
           "e5": 1.009,
           "e10": 1.009,
+          "price": 1.009,
           "isOpen": true,
           "houseNumber": "36-42",
           "postCode": 10243
@@ -48,6 +50,7 @@
           "diesel": 1.009,
           "e5": 1.009,
           "e10": 1.009,
+          "price": 1.009,
           "isOpen": true,
           "houseNumber": "12\/14",
           "postCode": 10179
@@ -64,6 +67,7 @@
           "diesel": 1.009,
           "e5": 1.009,
           "e10": 1.009,
+          "price": 1.009,
           "isOpen": true,
           "houseNumber": "4",
           "postCode": 10179
