@@ -37,3 +37,37 @@ exports.TankGetStation = class TankAPIGetStation extends Action {
       } }).slice(0,30)
   }
 }
+
+exports.TankRegisterAlarm = class TankRegisterAlarm extends Action {
+  constructor () {
+    super()
+    this.name = 'tank:add_alarm'
+    this.description = 'I monitor a tank station',
+    this.outputExample = {
+      enableBot : true
+    }
+    this.inputs = {
+      station: {
+        required: true,
+        description: 'TankStation'
+      },
+      desiredPrice: {
+        required: true,
+        description: 'Desired Price'
+      },
+      oilType: {
+        required: true,
+        description: 'Oil Type (e5, e10, diesel)'
+      },
+      botData: {
+        required: true,
+        description: 'Added by the bot'
+      }
+    }
+  }
+
+  async run (data) {
+    await api.scheduler.add(data.params.botData.chat_id, 'telegram', 'tankTask', 'every 1 hours', data.params)
+    //await api.tasks.enqueue('schedulerTask', {}, 'default')
+  }
+}

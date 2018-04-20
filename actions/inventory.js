@@ -1,4 +1,4 @@
-"use strict"
+'use strict'
 const {Action, api} = require('actionhero')
 
 class InventoryAction extends Action {
